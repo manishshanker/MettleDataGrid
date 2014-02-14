@@ -1,0 +1,15 @@
+.mettleDataGrid .resize-handle {
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    top: 0;
+    right: -1px;
+    cursor: e-resize;
+	bottom: 0;
+}
+
+.resize-guide {
+	width: 2px;
+	background-color: #ccc;
+	position: absolute;
+}

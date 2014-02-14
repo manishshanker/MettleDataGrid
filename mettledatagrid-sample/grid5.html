@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>MettleDataGrid | Real-time data stream example</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/jquery-ui-1.8.16.custom.css" />
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/jquery.multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/ui.daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.greyTheme.css"/>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.DATE.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.filter.MULTI_SELECT.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.datePicker.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.dateRange.css"/>
+
+    <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery-ui-1.8.23.custom.min.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.multiselect.patched.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/daterangepicker.jQuery.patched.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/json2.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="lib/js/vendor/mettleDataGrid.min.js"></script>
+
+    <script type="text/javascript" src="lib/js/app/gridDataSource/mettleDataGrid.FakeLocalSource.js"></script>
+    <script type="text/javascript" src="lib/js/app/gridDataSource/fakeDataSet/mettleDataGrid.fakeDataSet5.js"></script>
+    <script type="text/javascript" src="lib/js/app/webSocketExample/FBWebSocketService.js"></script>
+
+    <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script type="text/javascript" src="http://www.flotcharts.org/flot/jquery.flot.js"></script>
+
+    <script type="text/javascript" src="lib/js/app/grid5.js"></script>
+</head>
+
+<body>
+<div id="mainContainer">
+    <p>Instruction: Open this URL in multiple devices and press the start button to simulate real-time ticks.</p>
+    <input id="startStopBtn" type="button" value="Start"/>
+    <div id="gridLive" class="mettleDataGrid-grey"></div>
+    <div class="chart-title">Barclays Plc - Bid Change</div>
+    <div id="flotcontainer" style="width: 500px; height: 150px;"></div>
+</div>
+</body>
+</html>

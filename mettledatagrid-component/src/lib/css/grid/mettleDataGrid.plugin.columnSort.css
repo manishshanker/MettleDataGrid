@@ -1,0 +1,28 @@
+.mettleDataGrid .mettleDataGrid-heading .sort-hover {
+	background: url(../../img/defaultTheme/mettleDataGrid_header_bg.png) 0 -119px repeat-x;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .desc,
+.mettleDataGrid .mettleDataGrid-heading .asc {
+    background: url(../../img/defaultTheme/mettleDataGrid_header_bg.png) 0 -56px repeat-x;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .sortable-column .sort-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    right: 2px;
+    top: 4px;
+    position: absolute;
+    z-index: 0;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .desc .sort-arrow {
+    display: inline-block;
+    background: url(../../img/defaultTheme/mettleDataGrid_arrows.png) 0 -33px no-repeat;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .asc .sort-arrow {
+    display: inline-block;
+    background: url(../../img/defaultTheme/mettleDataGrid_arrows.png) no-repeat;
+}

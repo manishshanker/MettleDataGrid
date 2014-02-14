@@ -1,0 +1,162 @@
+@charset "utf-8";
+.mettleDataGrid, .mettleDataGrid div, .mettleDataGrid  h3,
+.mettleDataGrid span, .mettleDataGrid input, .mettleDataGrid ul, .mettleDataGrid li, .mettleDataGrid * {
+    margin: 0;
+    padding: 0;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+.mettleDataGrid {
+    border: 1px solid #9DB9ED;
+    border-top: 2px solid #8FC65B;
+    overflow: hidden;
+    margin: 10px;
+    font-size: 0.7em;
+    position: relative;
+	width: auto;
+	font-family: Arial, serif;
+}
+
+.mettleDataGrid .row,
+.mettleDataGrid .mettleDataGrid-heading {
+    white-space: nowrap;
+}
+
+.mettleDataGrid .mettleDataGrid-heading {
+    background: url(../../img/defaultTheme/mettleDataGrid_header_bg.png) repeat-x;
+	border-bottom: 1px solid #ccc;
+}
+
+.mettleDataGrid .mettleDataGrid-rows {
+    width: 100%;
+    overflow: auto;
+    height: 350px;
+    display: block;
+	background: #dddddd;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .row {
+    background: #eee;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .group-header-row .cell,
+.mettleDataGrid .mettleDataGrid-rows .row .cell {
+    margin-top: 0;
+}
+
+.mettleDataGrid .group-header-row .cell,
+.mettleDataGrid .row .cell {
+    line-height: 22px;
+    height: 22px;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .cell {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    font-weight: bold;
+    padding: 8px 10px 8px 10px;
+    color: #555;
+    background: url(../../img/defaultTheme/mettleDataGrid_header_bg.png) repeat-x;
+    display: inline-block;
+    position: relative;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.ie7below .mettleDataGrid .mettleDataGrid-heading .cell {
+	display: inline;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .first {
+	border-left: 0;
+	padding-left: 11px;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .last {
+	/*border-right: 0;*/
+}
+
+.mettleDataGrid .mettleDataGrid-rows .group-header-row .cell,
+.mettleDataGrid .mettleDataGrid-rows .row .cell {
+	height: auto;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .row-first {
+    border-top: 1px solid #EDEDED;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .cell {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .even,
+.mettleDataGrid .mettleDataGrid-rows .even .cell {
+    background-color: #F7F7F7;
+}
+
+.mettleDataGrid .group-header-row .cell,
+.mettleDataGrid .row .cell {
+    padding: 0 10px 0 10px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #fff;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 4px;
+	text-overflow: ellipsis;
+}
+
+.ie7below .mettleDataGrid .group-header-row .cell,
+.ie7below .mettleDataGrid .row .cell {
+	display: inline;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .row-hover {
+    background-color: #ebebeb;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .row-hover .cell {
+    background-color: #c9c9c9;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .cell {
+    cursor: default;
+}
+
+.column-helper {
+    border: 0;
+    font-family: Arial,serif;
+    z-index: 9999;
+}
+
+.column-helper .mettleDataGrid-heading {
+    border: 0;
+}
+
+.mettleDataGrid .total-row-count {
+    background-color: #eee;
+    text-align: right;
+    padding: 2px 5px 2px 0;
+}
+
+.mettleDataGrid .loading-message {
+    display: none;
+    font-size: 85%;
+    background-color: #cc0000;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    bottom: 0;
+    padding: 2px 4px;
+    text-align: center;
+}
+
+.NUMERIC {
+    text-align: right;
+}

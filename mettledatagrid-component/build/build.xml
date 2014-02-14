@@ -1,0 +1,106 @@
+<project name="ccp" default="package" basedir=".\..">
+
+    <property name="libSource" value="${basedir}\src\lib"/>
+    <property name="vendorLibSource" value="${basedir}\src\lib\vendor"/>
+    <property name="outputDir" value="${basedir}\out"/>
+
+    <taskdef name="yuicompress" classname="com.yahoo.platform.yui.compressor.YUICompressTask">
+        <classpath>
+            <pathelement path="${basedir}\build\jars\YUIAnt.jar"/>
+            <pathelement path="${basedir}\build\jars\yuicompressor-2.4.7.jar"/>
+            <pathelement path="${basedir}\build\jars\js.jar"/>
+        </classpath>
+    </taskdef>
+
+    <tstamp>
+        <format property="TIMESTAMP" pattern="ddMMyyyyHHmmss" locale="en,UK"/>
+    </tstamp>
+
+    <target name="package" depends="clean, merge-and-minify-css, merge-and-minify-js, copy-themes-to-out, add-build-timestamp, copy-to-sample"></target>
+
+    <target name="clean">
+        <delete dir="${outputDir}"/>
+    </target>
+
+    <target name="merge-and-minify-js">
+        <sequential>
+            <echo message="BEGIN: JS OPTIMIZATION"/>
+            <concat destfile="${outputDir}\js\mettleDataGrid.js" fixlastline="true">
+                <union>
+                    <!--<fileset dir="${vendorLibSource}\js" casesensitive="false" includes="jquery.js"/>-->
+                    <!--<fileset dir="${vendorLibSource}\js" casesensitive="false" includes="jquery-ui-*.js"/>-->
+                    <!--<fileset dir="${vendorLibSource}\js" casesensitive="false" includes="*.js"/>-->
+
+                    <fileset dir="${libSource}\js\app" casesensitive="false" includes="MettleDataGrid.js"/>
+                    <fileset dir="${libSource}\js\app" casesensitive="false" includes="core/jquery.mettleDataGrid.core.js"/>
+                    <fileset dir="${libSource}\js\app" casesensitive="false" includes="core/**/*.js"/>
+                    <fileset dir="${libSource}\js\app" casesensitive="false" includes="extensions/**/*.js"/>
+                </union>
+            </concat>
+            <copy file="${outputDir}\js\mettleDataGrid.js" tofile="${outputDir}\js\mettleDataGrid.min.js"/>
+            <yuicompress linebreak="300"
+                         warn="false"
+                         munge="yes"
+                         preserveallsemicolons="true"
+                         outputfolder="${outputDir}\js">
+                <fileset dir="${outputDir}\js">
+                    <include name="mettleDataGrid.min.js"/>
+                </fileset>
+            </yuicompress>
+            <echo message="END: JS OPTIMIZATION"/>
+        </sequential>
+    </target>
+
+    <target name="merge-and-minify-css">
+        <sequential>
+            <echo message="BEGIN: CSS OPTIMIZATION"/>
+            <concat destfile="${outputDir}\css\mettleDataGrid.css" fixlastline="true">
+                <union>
+                    <!--<fileset dir="${vendorLibSource}\css" casesensitive="false" includes="jquery-ui-*.css"/>-->
+                    <!--<fileset dir="${vendorLibSource}\css" casesensitive="false" includes="*.css"/>-->
+
+                    <fileset dir="${libSource}\css" casesensitive="false" includes="jqueryUI/*.css"/>
+                    <fileset dir="${libSource}\css" casesensitive="false" includes="grid/mettleDataGrid.core.css"/>
+                    <fileset dir="${libSource}\css" casesensitive="false" includes="grid/**/*.css"/>
+                    <fileset dir="${libSource}\css" casesensitive="false" includes="extensions/**/*.css"/>
+                </union>
+            </concat>
+            <copy file="${outputDir}\css\mettleDataGrid.css" tofile="${outputDir}\css\mettleDataGrid.min.css"/>
+            <yuicompress linebreak="300" warn="false" munge="yes" preserveallsemicolons="true"
+                         outputfolder="${outputDir}\css">
+                <fileset dir="${outputDir}\css" >
+                    <include name="mettleDataGrid.min.css" />
+                </fileset>
+            </yuicompress>
+            <echo message="END: CSS OPTIMIZATION"/>
+        </sequential>
+    </target>
+
+    <target name="copy-themes-to-out">
+        <copy todir="${outputDir}\themes">
+            <fileset dir="${libSource}\css\themes"/>
+        </copy>
+        <copy todir="${outputDir}\img">
+            <fileset dir="${libSource}\img"/>
+        </copy>
+    </target>
+
+    <target name="add-build-timestamp">
+        <echo message="BEGIN: ADD BUILD TIMESTAMP"/>
+        <replaceregexp file="${outputDir}\js\mettleDataGrid.min.js"
+                       match="(__TIMESTAMP__)"
+                       flags="gs"
+                       replace="${TIMESTAMP}"/>
+        <replaceregexp file="${outputDir}\js\mettleDataGrid.js"
+                       match="(__TIMESTAMP__)"
+                       flags="gs"
+                       replace="${TIMESTAMP}"/>
+        <echo message="END: ADD BUILD TIMESTAMP"/>
+    </target>
+
+    <target name="copy-to-sample">
+        <copy file="${outputDir}\css\mettleDataGrid.min.css" tofile="..\mettledatagrid-sample\lib\css\grid\mettleDataGrid.min.css"/>
+        <copy file="${outputDir}\js\mettleDataGrid.min.js" tofile="..\mettledatagrid-sample\lib\js\vendor\mettleDataGrid.min.js"/>
+    </target>
+
+</project>

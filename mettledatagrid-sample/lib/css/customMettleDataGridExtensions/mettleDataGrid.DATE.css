@@ -1,0 +1,7 @@
+.mettleDataGrid .date {
+    color: #0099ff;
+    display: inline;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

@@ -1,0 +1,181 @@
+.mettleDataGrid-group-by , .mettleDataGrid-group-by  div,
+.mettleDataGrid-group-by   h3, .mettleDataGrid-group-by  span,
+.mettleDataGrid input {
+    margin: 0;
+    padding: 0;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+.mettleDataGrid-group-by.ui-state-highlight-hover {
+    background: #e8e8e8 none;
+    border: 1px dashed #f00;
+}
+
+.mettleDataGrid-group-by {
+    width: 90%;
+    border: 1px solid transparent;
+    margin-left: 10px;
+	margin-top: 10px;
+    line-height: 1.6em;
+    height: 1.6em;
+	font-family: Arial, serif;
+}
+
+.mettleDataGrid-group-by p {
+    margin: 0;
+}
+
+.mettleDataGrid-group-by  .cell {
+	background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) 0 -96px no-repeat;
+	padding-left: 5px;
+	display: inline-block;
+    cursor: move;
+}
+
+.mettleDataGrid-group-by.ui-state-highlight-hover .cell {
+    cursor: default;
+}
+
+.mettleDataGrid-group-by  .first  {
+	background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) no-repeat;
+	padding-left: 5px;
+	display: inline-block;
+}
+
+.mettleDataGrid-group-by  .cell .label {
+	background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) 0 -96px repeat-x;
+	display: inline-block;
+	line-height: 26px;
+}
+
+.mettleDataGrid-group-by  .cell .arrow {
+	background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) right -48px no-repeat;
+	display: inline-block;
+	padding-right: 16px;
+}
+
+.mettleDataGrid-group-by  .last .arrow {
+	background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) top right no-repeat;
+}
+
+.mettleDataGrid-group-by .cell a.remove,
+.mettleDataGrid-group-by .cell a.remove:link,
+.mettleDataGrid-group-by .cell a.remove:visited,
+.mettleDataGrid-group-by .cell a.remove:hover,
+.mettleDataGrid-group-by .cell a.remove:active {
+	text-decoration: none;
+	color: #f00;
+}
+
+.mettleDataGrid-group-by .group-helper {
+    background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) no-repeat;
+}
+
+.mettleDataGrid-group-by .group-helper .arrow {
+    background: url(../../img/defaultTheme/mettleDataGrid_groups_sprite.png) top right no-repeat;
+}
+
+/*Group styles for the grid*/
+.mettleDataGrid .group {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.ie7below .mettleDataGrid .group {
+	display: inline;
+}
+
+.mettleDataGrid .group .cell {
+	display: inline-block;
+	padding: 0 10px 0 10px;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
+.ie7below .mettleDataGrid .group .cell {
+	display: inline;
+}
+
+.mettleDataGrid .group .group-header {
+	margin: 0;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 0 10px 0 0;
+	position: relative;
+}
+
+.mettleDataGrid .group .details-in-first-column {
+	border-bottom: 1px solid #aaa;
+}
+
+.mettleDataGrid .group-data .group .group-header .cell {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mettleDataGrid .group-data .group .details-in-first-column .cell {
+	border-color: transparent;
+	overflow: visible;
+	text-overflow: clip;
+}
+
+.mettleDataGrid .group .details-in-first-column .first-cell-in-group {
+	position: relative;
+}
+
+.mettleDataGrid .group-closed .row,
+.mettleDataGrid .group-closed .group-header-row {
+	height: 0;
+	overflow: hidden;
+}
+
+.mettleDataGrid .group-closed-complete .row,
+.mettleDataGrid .group-closed-complete .group-data {
+	display: none;
+}
+
+.mettleDataGrid .row,
+.mettleDataGrid .group-header-row,
+.mettleDataGrid .group-closed .close {
+	height: 22px;
+	transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-webkit-transition: height 0.2s;
+	-o-transition: height 0.2s;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .group .row-first {
+	border-top: 0;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .group .spacer {
+	vertical-align: top;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.mettleDataGrid .group .open-close-indicator {
+	display: inline-block;
+	font-size: 100%;
+	width: 5px;
+	line-height: 1.2em;
+	position: absolute;
+	z-index: 1;
+	vertical-align: top;
+	top: 4px;
+	left: 3px;
+	height: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.mettleDataGrid .mettleDataGrid-heading .groupable-indicator {
+    display: inline-block;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    height: 5px;
+    width: 9px;
+    overflow: hidden;
+}

@@ -1,0 +1,39 @@
+.mettleDataGrid-switch-theme {
+	vertical-align: middle;
+	margin-left: 10px;
+	font-family: Arial,serif;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.mettleDataGrid-switch-theme .theme {
+	display: inline-block;
+	height: 15px;
+	width: 15px;	
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.mettleDataGrid-switch-theme .theme-default {
+	background-color: #8FC65B ;
+}
+
+.mettleDataGrid-switch-theme .theme-blue {
+	background-color: #05687D;
+}
+
+.mettleDataGrid-switch-theme .theme-brown {
+	background-color: #b15700 ;
+}
+
+.mettleDataGrid-switch-theme .theme-grey {
+	background-color: #C5C5C4;
+}
+
+.mettleDataGrid-switch-theme .theme-yellow {
+	background-color: #ffcc33;
+}
+
+.mettleDataGrid-switch-theme .theme-sapient {
+    background-color: #000000;
+}

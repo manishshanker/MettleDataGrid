@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>MettleDataGrid | Multiple themes and Multiple instances</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/jquery-ui-1.8.16.custom.css" />
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/jquery.multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="lib/vendor/css/ui.daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.themeSwitcher.css"/>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.DATE.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.filter.MULTI_SELECT.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.datePicker.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/customMettleDataGridExtensions/mettleDataGrid.dateRange.css"/>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.sapientTheme.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.blueTheme.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.brownTheme.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.greyTheme.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/mettleDataGrid/mettleDataGrid.yellowTheme.css"/>
+
+    <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery-ui-1.8.23.custom.min.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.multiselect.patched.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/daterangepicker.jQuery.patched.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/json2.js"></script>
+    <script type="text/javascript" src="lib/vendor/js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="lib/js/vendor/mettleDataGrid.min.js"></script>
+
+    <!--custom extension to grid-->
+    <script type="text/javascript" src="lib/js/app/gridExtensions/mettleDataGrid.filter.MULTI_SELECT.js"></script>
+    <script type="text/javascript" src="lib/js/app/gridExtensions/mettleDataGrid.filter.DATE.js"></script>
+    <script type="text/javascript" src="lib/js/app/gridExtensions/mettleDataGrid.plugin.switchTheme.js"></script>
+
+    <script type="text/javascript" src="lib/js/app/gridDataSource/mettleDataGrid.FakeLocalSource.js"></script>
+    <script type="text/javascript" src="lib/js/app/gridDataSource/fakeDataSet/mettleDataGrid.fakeDataSet2.js"></script>
+    <script type="text/javascript" src="lib/js/app/gridDataSource/fakeDataSet/mettleDataGrid.fakeDataSet4.js"></script>
+
+    <script type="text/javascript" src="lib/js/app/grid3.js"></script>
+
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div class="mettleDataGrid-switch-theme grid1-mettleDataGrid-switch-theme">
+            <span class="">Switch theme:</span>
+            <a class="theme theme-brown" href="#brown"></a>
+            <a class="theme theme-default" href="#default"></a>
+            <a class="theme theme-blue" href="#blue"></a>
+            <a class="theme theme-grey" href="#grey"></a>
+        </div>
+
+        <div class="grid1-mettleDataGrid-group-by mettleDataGrid-group-by">
+            <p class="empty-message">Drop columns here to group by</p>
+            <div class="groups"></div>
+        </div>
+
+        <div id="grid1"></div>
+
+        <div class="mettleDataGrid-switch-theme grid2-mettleDataGrid-switch-theme">
+            <span class="">Switch theme:</span>
+            <a class="theme theme-brown" href="#brown"></a>
+            <a class="theme theme-default" href="#default"></a>
+            <a class="theme theme-blue" href="#blue"></a>
+            <a class="theme theme-grey" href="#grey"></a>
+        </div>
+
+        <div class="grid2-mettleDataGrid-group-by mettleDataGrid-group-by">
+            <p class="empty-message">Drop columns here to group by</p>
+            <div class="groups"></div>
+        </div>
+
+        <div id="grid2"></div>
+    </div>
+</body>
+</html>
