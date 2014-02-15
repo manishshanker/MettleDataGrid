@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mettledatagrid : MettleDataGrid is a fully featured data grid component for web application." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mettledatagrid</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/manishshanker/MettleDataGrid">View on GitHub</a>
+
+          <h1 id="project_title">Mettledatagrid</h1>
+          <h2 id="project_tagline">MettleDataGrid is a fully featured data grid component for web application.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/manishshanker/MettleDataGrid/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/manishshanker/MettleDataGrid/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="mettledatagrid" class="anchor" href="#mettledatagrid"><span class="octicon octicon-link"></span></a>MettleDataGrid</h1>
+
+<p>MettleDataGrid is a sophisticated, easy to extend, fully featured jQuery based data grid control.</p>
+
+<h3>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<p>✔ Dynamic data loading <br>
+✔ Virtual scrolling <br>
+✔ Dynamic data grouping <br>
+✔ Data filtering <br>
+✔ Column sorting, re-ordering, re-sizing <br>
+✔ State persistence <br>
+✔ Easy to skin/theme (purely CSS driven) <br>
+✔ Easy extension with custom filter, cell renderer, sorting <br>
+✔ Tablet support (iOS/Android) <br>
+✔ Easy data mock - enable faster development and testing <br>
+✔ JSON based interface <br></p>
+
+<h3>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p>The grid provides all the above features. The components is under the folder <code>mettledatagrid-component</code>. There are various sample code as shown in example section below in folder <code>mettledatagrid-sample</code>. The component depends on <code>jQuery</code> and can be easily extended to add new features as required. <br></p>
+
+<p>The grid can be extended via three ways <code>filter</code>, <code>renderer</code> or <code>plugin</code>. Example of each is provided below. <code>filter</code> and <code>renderer</code> defined by you needs to be referenced in response data as shown in fakeDataSets in the sample.</p>
+
+<p>Below are some of the files to reference for example: <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-sample/lib/js/app/gridExtensions/mettleDataGrid.filter.DATE.js">Custom Filter</a> <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-component/src/lib/js/app/extensions/mettleDataGrid.renderer.DATE.js">Custom Renderer</a> <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-component/src/lib/js/app/extensions/mettleDataGrid.plugin.LABEL_BUTTON.js">Custom Plug-in</a> <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-sample/lib/js/app/gridDataSource/mettleDataGrid.FakeLocalSource.js">Fake Data Source</a> <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-sample/lib/js/app/gridDataSource/fakeDataSet/mettleDataGrid.fakeDataSet1.js">Fake Data Source Data-set</a> <br><a href="http://github.com/manishshanker/MettleDataGrid/blob/master/mettledatagrid-sample/lib/js/app/gridDataSource/mettleDataGrid.MyRemoteSource.js">Remote Data Source</a> <br></p>
+
+<h3>
+<a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser support</h3>
+
+<p>✔ IE8+ <br>
+✔ FireFox  <br>
+✔ Chrome <br>
+✔ Safari <br>
+✔ Opera <br>
+✔ iOS Safari <br>
+✔ Android Chrome <br></p>
+
+<h3>
+<a name="grid-examples" class="anchor" href="#grid-examples"><span class="octicon octicon-link"></span></a>Grid Examples</h3>
+
+<ol>
+<li><a href="http://rawgithub.com/manishshanker/MettleDataGrid/master/mettledatagrid-sample/grid1.html">Basic</a></li>
+<li><a href="http://rawgithub.com/manishshanker/MettleDataGrid/master/mettledatagrid-sample/grid2.html">Grouping, custom extension, filters</a></li>
+<li><a href="http://rawgithub.com/manishshanker/MettleDataGrid/master/mettledatagrid-sample/grid3.html">Multiple themes and instances</a></li>
+<li><a href="http://rawgithub.com/manishshanker/MettleDataGrid/master/mettledatagrid-sample/grid4.html">Mock real-time updates</a></li>
+<li><a href="http://rawgithub.com/manishshanker/MettleDataGrid/master/mettledatagrid-sample/grid5.html">Real-time update using FireBase</a></li>
+</ol><h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>Copyright 2011-2014 Manish Shanker</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mettledatagrid maintained by <a href="https://github.com/manishshanker">manishshanker</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
