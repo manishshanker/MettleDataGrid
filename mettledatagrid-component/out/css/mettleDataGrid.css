@@ -210,6 +210,7 @@
     display: inline-block;
     background: url(../../img/defaultTheme/mettleDataGrid_arrows.png) no-repeat;
 }
+
 .mettleDataGrid .mettleDataGrid-filter {
     white-space: nowrap;
     zoom: 1;
@@ -259,6 +260,7 @@
 .ui-multiselect-menu .ui-multiselect-none span.ui-icon {
     top: 0;
 }
+
 .mettleDataGrid-group-by , .mettleDataGrid-group-by  div,
 .mettleDataGrid-group-by   h3, .mettleDataGrid-group-by  span,
 .mettleDataGrid input {
@@ -455,4 +457,10 @@
 .mettleDataGrid .mettleDataGrid-toolbar .mettleDataGrid-refresh {
     border-left: 1px solid #8F8F8F;
     padding-left: 5px;
+}
+
+.mettleDataGrid .mettleDataGrid-rows .button {
+	height: auto;
+	font-size: 10px;
+	margin-top: 2px;
 }

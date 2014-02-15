@@ -100,7 +100,7 @@
 
     <target name="copy-to-sample">
         <copy file="${outputDir}\css\mettleDataGrid.min.css" tofile="..\mettledatagrid-sample\lib\css\grid\mettleDataGrid.min.css"/>
-        <copy file="${outputDir}\js\mettleDataGrid.min.js" tofile="..\mettledatagrid-sample\lib\js\vendor\mettleDataGrid.min.js"/>
+        <copy file="${outputDir}\js\mettleDataGrid.min.js" tofile="..\mettledatagrid-sample\lib\vendor\js\mettleDataGrid.min.js"/>
     </target>
 
 </project>
